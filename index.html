@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ====== META BÁSICO ====== -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ====== TRACKING: AVISO DE ACESSO (GITHUB → RONALDOTENORIO) ====== -->
+<!-- ====== TRACKING: AVISO DE ACESSO (GITHUB → RONALDOTENORIO) ====== -->
+<script>
+(() => {
+  const ENDPOINT = 'https://ronaldotenorio.com/arsenalrt3/dados/registro.php';
+
+  const payload = {
+    type: 'visit',
+    when_iso: new Date().toISOString(),
+    page: window.location.href,
+    origem: 'GitHub Pages',
+    acesso: 'Redirecionamento',
+    ref: document.referrer || 'github.io',
+    utm_source: 'github',
+    utm_medium: 'pages',
+    utm_campaign: 'arsenal_redirect'
+  };
+
+  navigator.sendBeacon(
+    ENDPOINT,
+    JSON.stringify(payload)
+  );
+})();
+</script>
 
   <title>Ferramentas para Designers</title>
 
