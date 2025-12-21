@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- ====== TRACKING: AVISO DE ACESSO (GITHUB → RONALDOTENORIO) ====== -->
+<script>
+(() => {
+  const ENDPOINT = 'https://ronaldotenorio.com/arsenalrt3/dados/registro.php';
+
+  const payload = {
+    type: 'visit',
+    when_iso: new Date().toISOString(),
+    page: window.location.href,
+    origem: 'GitHub Pages',
+    acesso: 'Redirecionamento',
+    ref: document.referrer || 'github.io',
+    utm_source: 'github',
+    utm_medium: 'pages',
+    utm_campaign: 'arsenal_redirect'
+  };
+
+  // Envia sem bloquear o carregamento
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(ENDPOINT, JSON.stringify(payload));
+  } else {
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(() => {});
+  }
+})();
+</script>
+
+  <title>Ferramentas para Designers</title>
+
+  <!-- ====== FAVICON / CANONICAL ====== -->
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="canonical" href="https://personaltaf.com/" />
+
+  <!-- ====== SEO PADRÃO ====== -->
+  <meta
+    name="description"
+    content="Lelisson Personal TAF - Consultoria online e método validado para aprovação no Teste de Aptidão Física (TAF). Mais de 10.000 alunos aprovados em todo o Brasil."
+  />
+  <meta
+    name="keywords"
+    content="TAF, concurso, polícia, barra fixa, Lelisson, Personal TAF, consultoria TAF, treinamento TAF, teste físico concurso"
+  />
+  <meta name="author" content="Agência aNave" />
+
+  <!-- ====== OPEN GRAPH (Facebook, WhatsApp, LinkedIn, etc.) ====== -->
+  <meta property="og:title" content="Lelisson Personal TAF - Consultoria Online para TAF" />
+  <meta
+    property="og:description"
+    content="Especialista em fisiologia do exercício e condicionamento físico, com foco exclusivo na preparação de candidatos para o Teste de Aptidão Física (TAF)."
+  />
+  <meta
+    property="og:image"
+    content="https://personaltaf.com/img/LelissonPersonal_PersonalTAF_ConcursoPolicia_TAF-FemininoBarraFixa.jpg"
+  />
+  <meta property="og:url" content="https://personaltaf.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- ====== TWITTER ====== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lelisson Personal TAF - Consultoria Online para TAF" />
+  <meta
+    name="twitter:description"
+    content="Ajudo você a conquistar sua aprovação no TAF com metodologia validada e treinamento personalizado."
+  />
+  <meta
+    name="twitter:image"
+    content="https://personaltaf.com/img/LelissonPersonal_PersonalTAF_ConcursoPolicia_TAF-FemininoBarraFixa.jpg"
+  />
+
+  <!-- ====== ICONES E FONTES ====== -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- ====== COMANDO DOS BOTÕES (PIX) ====== -->
+  <!-- Cole aqui o seu script exatamente como está (sem alterações) -->
+  <!-- <script> ... </script> -->
+
+  <!-- ====== REMOVER ÍCONE DE CONSENTIMENTO ====== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tryRemoveConsent = setInterval(() => {
+        const consentIframes = document.querySelectorAll("iframe[src*='consentmanager']");
+        consentIframes.forEach(iframe => iframe.style.display = "none");
+        const icons = document.querySelectorAll("#cmplogo, .cmplogo, #cmpicon, .cmpicon, #cmpbox, .cmpbox");
+        icons.forEach(el => el.style.display = "none");
+      }, 1000);
+      setTimeout(() => clearInterval(tryRemoveConsent), 10000);
+    });
+  </script>
+
+  <style>
+    #cmplogo, .cmplogo, #cmpicon, .cmpicon, #cmpbox, .cmpbox {
+      display: none !important;
+    }
+  </style>
+
+  <!-- ====== GOOGLE ANALYTICS ====== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHL73L4WPX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHL73L4WPX');
+  </script>
+
+  <!-- ====== META PIXEL ====== -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1834029590811260');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1834029590811260&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+
+  <!-- ====== BLOQUEIO DE CLIQUE DIREITO ====== -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('mousedown', e => {
+      if (e.button === 2 || e.button === 3) e.preventDefault();
+    });
+  </script>
+
+
+ <style>
+  /* ====== RESET ====== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: #550284;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  /* ====== BANNER ====== */
+  .banner {
+    background: url('img/Banner_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  /* ====== LOGO CENTRAL ====== */
+  .logo-topo {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-topo img {
+    max-width: 45%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+
+  /* ====== SEÇÃO SOBRE ====== */
+  .sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sobre img {
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  .texto {
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .texto p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .texto b {
+    font-weight: 700;
+    color: #000;
+  }
+
+  /* ====== GALERIA (CONTAINER) ====== */
+  .galeria {
+    width: 100%;
+    background: #fff;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ====== GALERIA (GRID DOS CARDS) ====== */
+  .galeria-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1150px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ====== CARD DA FERRAMENTA ====== */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* ====== IMAGEM DA FERRAMENTA ====== */
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* ====== HOVER DA IMAGEM ====== */
+  .card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ====== AÇÕES SOBRE A IMAGEM ====== */
+  .card__actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 0 12px;
+    z-index: 3;
+  }
+
+  /* ====== BOTÕES SOBREPOSTOS (COMPACTO) ====== */
+  .btn-overlay {
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    color: #4b0078;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.05;
+    padding: 8px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.22);
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    letter-spacing: 0.2px;
+  }
+
+  /* ====== FEEDBACK DE CLIQUE ====== */
+  .btn-overlay:active {
+    transform: translateY(1px);
+  }
+
+  /* ====== SLIDE ====== */
+  .slide-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .slides {
+    display: flex;
+    width: calc(950px * 20); /* 20 imagens */
+    animation: slide 180s infinite linear;
+  }
+
+  .slides img {
+    width: 950px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-19000px); } /* 950px * 20 */
+  }
+
+  /* ====== RODAPÉ ====== */
+  footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+  }
+
+  .redes-sociais {
+    margin-bottom: 10px;
+  }
+
+  .redes-sociais a {
+    color: #550284;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+
+  .redes-sociais a:hover {
+    color: #fff;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  footer p a {
+    color: #550284;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer p a:hover {
+    color: #fff;
+  }
+
+  /* ====== MEDIA QUERIES ====== */
+
+  /* === Desktop (>=1200px) === */
+  @media (min-width: 1200px) {
+    .galeria-inner {
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+  }
+
+  /* === Tablets (<=1024px) === */
+  @media (max-width: 1024px) {
+    .galeria-inner {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    .slide-container {
+      max-width: 90%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  /* === Mobile (<=768px) === */
+  @media (max-width: 768px) {
+    .galeria-inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .card {
+      max-width: 90%;
+    }
+
+    .slide-container {
+      width: 100%;
+      max-width: 95%;
+      margin: 30px auto;
+      border-radius: 15px;
+    }
+
+    .slides {
+      width: calc(100% * 20);
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+  }
+
+  /* === Botões compactos no mobile (<=420px) === */
+  @media (max-width: 420px) {
+    .card__actions {
+      gap: 6px;
+      bottom: 10px;
+    }
+
+    .btn-overlay {
+      font-size: 10px;
+      padding: 7px 9px;
+      min-height: 32px;
+    }
+  }
+
+  /* === Telas muito pequenas (<=300px) === */
+  @media (max-width: 300px) {
+    .slide-container {
+      max-width: 90%;
+    }
+
+    .slides img {
+      height: 140px;
+    }
+  }
+</style>
+
+</head>
+
+
+<body>
+  <!-- ====== BANNER ====== -->
+  <section class="banner">
+    <div class="logo-topo">
+      <img src="img/Logo_FerramentasParaDesigners.png" alt="Logo Lelisson Personal TAF">
+    </div>
+  </section>
+
+  <!-- ====== SEÇÃO SOBRE ====== -->
+  <section class="sobre">
+    <img src="img/Perfil_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis.jpg" alt="Lelisson Personal TAF">
+    <div class="texto">
+      <p><b>Criamos este arsenal</b> pensando em quem está começando no design. Cada software é testado por nós <b>100 % livre de vírus&nbsp;</b>e acompanha um tutorial em vídeo, passo a passo, para você instalar sem erro já na primeira tentativa.</p>
+      <p>
+  Pedimos apenas um valor simbólico: ele cobre nossos custos de testagem e produção dos tutoriais e principalmente, permite que continuemos ajudando novos criativos a dar os primeiros passos com segurança e confiança.
+</p>
+
+<p>
+  <b>Escolha sua ferramenta, baixe em minutos e foque no que importa: criar.</b>
+</p>
+
+    </div>
+  </section>
+
+  <!-- ====== GALERIA ====== -->
+  <section class="galeria">
+    <div class="galeria-inner">
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_01.jpg" alt="Ferramenta de Design 01">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_02.jpg" alt="Ferramenta de Design 02">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_03.jpg" alt="Ferramenta de Design 03">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_04.jpg" alt="Ferramenta de Design 04">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_05.jpg" alt="Ferramenta de Design 05">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_06.jpg" alt="Ferramenta de Design 06">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <!-- EXTRAS (mantive todos os seus cards extras) -->
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_07.jpg" alt="Ferramenta de Design 07">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_08.jpg" alt="Ferramenta de Design 08">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_09.jpg" alt="Ferramenta de Design 09">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_10.jpg" alt="Ferramenta de Design 10">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+		<div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_11.jpg" alt="Ferramenta de Design 11">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+		<div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_12.jpg" alt="Ferramenta de Design 12">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>			
+      </div>
+<div class="card">
+  <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_13.jpg" alt="Ferramenta de Design 13">
+  <div class="card__actions">
+    <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+    <a class="btn-overlay btn-whats" target="_blank" rel="noopener noreferrer"
+       href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+      ENVIAR COMPROVANTE<br>E RECEBER LINK
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_14.jpg" alt="Ferramenta de Design 14">
+  <div class="card__actions">
+    <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+    <a class="btn-overlay btn-whats" target="_blank" rel="noopener noreferrer"
+       href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+      ENVIAR COMPROVANTE<br>E RECEBER LINK
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_15.jpg" alt="Ferramenta de Design 15">
+  <div class="card__actions">
+    <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+    <a class="btn-overlay btn-whats" target="_blank" rel="noopener noreferrer"
+       href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+      ENVIAR COMPROVANTE<br>E RECEBER LINK
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_16.jpg" alt="Ferramenta de Design 16">
+  <div class="card__actions">
+    <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+    <a class="btn-overlay btn-whats" target="_blank" rel="noopener noreferrer"
+       href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+      ENVIAR COMPROVANTE<br>E RECEBER LINK
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_17.jpg" alt="Ferramenta de Design 17">
+  <div class="card__actions">
+    <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+    <a class="btn-overlay btn-whats" target="_blank" rel="noopener noreferrer"
+       href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+      ENVIAR COMPROVANTE<br>E RECEBER LINK
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <a href="https://drive.google.com/drive/folders/18yfHNop-FMmDDw_3F8UePKportbO10TL?usp=drive_link"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_18.jpg"
+         alt="Ferramenta de Design 18">
+
+  </a>
+
+  <div class="card__actions">
+    <!-- sem botões neste item -->
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- ====== SLIDE DE IMAGENS ====== -->
+  <section class="slide-container">
+    <div class="slides">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_1.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_2.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_3.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_4.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_5.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_6.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_7.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_8.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_9.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_10.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_11.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_12.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_13.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_14.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_15.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_16.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_17.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_18.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_19.jpg" alt="">
+      <img src="img/Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_20.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- ====== RODAPÉ ====== -->
+  <footer>
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/rtjobs/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/watch?v=U8sAiprBOQQ&t=2s" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://ronaldotenorio.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-behance-square"></i>
+      </a>
+    </div>
+    
+</footer>
+
+ <!-- ========================================================= -->
+<!-- ====== TRACKING: VISITA + CLIQUES (IGNORA BOTÃO WHATS) ==== -->
+<!-- ========================================================= -->
+<script>
+(() => {
+  const ENDPOINT = 'dados/registro.php';
+  const VISITOR_KEY = 'ptaf_visitor_id';
+
+  const visitor_id =
+    localStorage.getItem(VISITOR_KEY) ||
+    (crypto?.randomUUID?.() || ('v_' + Math.random().toString(16).slice(2) + Date.now()));
+  localStorage.setItem(VISITOR_KEY, visitor_id);
+
+  const LINK_MAP = [
+  { url: 'drive.google.com/drive/folders/18yfHNop-FMmDDw_3F8UePKportbO10TL', label: 'Drive Ferramenta de Design 18' },
+  { url: 'instagram.com/rtjobs', label: 'Instagram' },
+  { url: 'youtube.com/watch', label: 'YouTube' },
+  { url: 'ronaldotenorio.com', label: 'Behance / Portfólio' },
+  { url: 'api.whatsapp.com/send', label: 'WhatsApp (geral)' }
+];
+
+
+  function mapLinkToLabel(href) {
+    if (!href) return '-';
+    const match = LINK_MAP.find(item => href.includes(item.url));
+    return match ? match.label : '-';
+  }
+
+  function cleanWhatsAppLink(href) {
+    if (href.includes('api.whatsapp.com/send/?phone=5582988261096')) {
+      return 'https://api.whatsapp.com/send/?phone=5582988261096';
+    }
+    return href;
+  }
+
+  function getUTMs() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      utm_source: p.get('utm_source') || '',
+      utm_medium: p.get('utm_medium') || '',
+      utm_campaign: p.get('utm_campaign') || '',
+      utm_content: p.get('utm_content') || ''
+    };
+  }
+
+  function deviceLabel() {
+    const ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) return 'iPhone';
+    if (/android/.test(ua)) return 'Android';
+    return 'Desktop';
+  }
+
+  let GEO_CACHE = null;
+  async function getGeo() {
+    if (GEO_CACHE) return GEO_CACHE;
+    try {
+      const res = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+      const data = await res.json();
+      GEO_CACHE = {
+        ip: data.ip || '',
+        city: data.city || '',
+        region: data.region || '',
+        country: data.country_name || ''
+      };
+    } catch {
+      GEO_CACHE = { ip: '', city: '', region: '', country: '' };
+    }
+    return GEO_CACHE;
+  }
+
+  function sendLog(payload) {
+    const body = JSON.stringify(payload);
+    if (navigator.sendBeacon) {
+      const ok = navigator.sendBeacon(ENDPOINT, new Blob([body], { type: 'application/json' }));
+      if (ok) return;
+    }
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+      keepalive: true
+    }).catch(() => {});
+  }
+
+  /* ====== TRACKING: VISITA ====== */
+  (async () => {
+    const geo = await getGeo();
+    const utm = getUTMs();
+    sendLog({
+      type: 'visit',
+      visitor_id,
+      when_iso: new Date().toISOString(),
+      page: location.href,
+      origem: deviceLabel(),
+      acesso: document.referrer ? 'Referência' : 'Acesso direto',
+      ref: document.referrer || '',
+      ...utm,
+      ...geo
+    });
+  })();
+
+    /* ========================================================= */
+  /* ====== TRACKING: CLIQUES (POR FERRAMENTA) =============== */
+  /* ========================================================= */
+  document.addEventListener('click', async function (e) {
+
+    /* ====== FUNÇÃO: IDENTIFICA A FERRAMENTA PELO CARD ======
+       Pega o texto do ALT da imagem (ex.: "Ferramenta de Design 01")
+    */
+    function getToolNameFromCard(target) {
+      const card = target.closest('.card');
+      if (!card) return 'Ferramenta (desconhecida)';
+
+      const img = card.querySelector('img');
+      const alt = img && img.getAttribute('alt') ? img.getAttribute('alt').trim() : '';
+      if (alt) return alt;
+
+      return 'Ferramenta (desconhecida)';
+    }
+
+    /* ====== CLIQUE NO BOTÃO PIX (COPIAR) ====== */
+    if (e.target.closest('.btn-copy')) {
+      const geo = await getGeo();
+      const utm = getUTMs();
+      const toolName = getToolNameFromCard(e.target);
+
+      sendLog({
+        type: 'click',
+        visitor_id,
+        when_iso: new Date().toISOString(),
+        page: location.href,
+        link: 'PIX',
+        link_text: `Pix ${toolName}`,  /* EX.: "Pix Ferramenta de Design 01" */
+        origem: deviceLabel(),
+        ref: document.referrer || '',
+        ...utm,
+        ...geo
+      });
+
+      return; /* não atrapalha o copiar */
+    }
+
+    /* ====== CLIQUE NO BOTÃO WHATS (NÃO BLOQUEIA) ====== */
+    if (e.target.closest('.btn-whats')) {
+      const aWhats = e.target.closest('a');
+      const hrefWhats = aWhats && aWhats.href ? aWhats.href : '';
+
+      const geo = await getGeo();
+      const utm = getUTMs();
+      const toolName = getToolNameFromCard(e.target);
+
+      sendLog({
+        type: 'click',
+        visitor_id,
+        when_iso: new Date().toISOString(),
+        page: location.href,
+        link: cleanWhatsAppLink(hrefWhats),
+        link_text: `Whats ${toolName}`, /* EX.: "Whats Ferramenta de Design 02" */
+        origem: deviceLabel(),
+        ref: document.referrer || '',
+        ...utm,
+        ...geo
+      });
+
+      return; /* deixa o Whats abrir normal */
+    }
+
+    /* ====== OUTROS LINKS (NORMAL) ====== */
+    const a = e.target.closest('a');
+    if (!a || !a.href) return;
+
+    const href = a.href;
+
+    const geo = await getGeo();
+    const utm = getUTMs();
+    const label = mapLinkToLabel(href);
+    const cleanLink = cleanWhatsAppLink(href);
+
+    sendLog({
+      type: 'click',
+      visitor_id,
+      when_iso: new Date().toISOString(),
+      page: location.href,
+      link: cleanLink,
+      link_text: label,
+      origem: deviceLabel(),
+      ref: document.referrer || '',
+      ...utm,
+      ...geo
+    });
+
+    e.preventDefault();
+    setTimeout(() => {
+      window.location.href = href;
+    }, 200);
+
+  }, { capture: true });
+
+
+
+})();
+</script>
+
+<!-- ========================================================= -->
+<!-- ====== BOTÃO PIX | COPIAR CHAVE PARA ÁREA DE TRANSFERÊNCIA -->
+<!-- ========================================================= -->
+<script>
+(() => {
+
+  /* ====== FUNÇÃO: COPIAR TEXTO ======
+     Responsável por copiar a chave PIX para a área de transferência
+  */
+  async function copiarTexto(texto) {
+    try {
+      await navigator.clipboard.writeText(texto);
+      return true;
+    } catch (erro) {
+      const textarea = document.createElement("textarea");
+      textarea.value = texto;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      const sucesso = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return sucesso;
+    }
+  }
+
+  /* ====== EVENTO: CLIQUE NO BOTÃO PIX ======
+     - Detecta clique em .btn-copy
+     - Copia a chave PIX definida no data-pix
+     - Mostra feedback visual no botão
+  */
+    document.addEventListener("click", async function (e) {
+    const botaoPix = e.target.closest(".btn-copy");
+    if (!botaoPix) return;
+
+    // não bloqueia o tracking, só evita seleção/click estranho no botão
+e.preventDefault();
+
+
+    const chavePix =
+      botaoPix.getAttribute("data-pix") ||
+      "mercadopago@ronaldotenorio.com";
+
+    const textoOriginal = botaoPix.textContent;
+
+    const copiou = await copiarTexto(chavePix);
+
+    botaoPix.textContent = copiou ? "PIX COPIADO ✅" : "ERRO AO COPIAR ❌";
+
+    setTimeout(() => {
+      botaoPix.textContent = textoOriginal;
+    }, 1200);
+  });
+
+
+})();
+</script>
+
+
+	
+</body>
+</html>
