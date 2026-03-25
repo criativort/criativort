@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- ====== TRACKING: AVISO DE ACESSO (GITHUB → RONALDOTENORIO) ====== -->
-<!-- ====== TRACKING: AVISO DE ACESSO (GITHUB → RONALDOTENORIO) ====== -->
-<script>
-(() => {
-  const ENDPOINT = 'https://ronaldotenorio.com/arsenalrt3/dados/registro.php';
-
-  const payload = {
-    type: 'visit',
-    when_iso: new Date().toISOString(),
-    page: window.location.href,
-    origem: 'GitHub Pages',
-    acesso: 'Redirecionamento',
-    ref: document.referrer || 'github.io',
-    utm_source: 'github',
-    utm_medium: 'pages',
-    utm_campaign: 'arsenal_redirect'
-  };
-
-  navigator.sendBeacon(
-    ENDPOINT,
-    JSON.stringify(payload)
-  );
-})();
-</script>
+  <!-- ====== META BÁSICO ====== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Ferramentas para Designers</title>
 
   <!-- ====== FAVICON / CANONICAL ====== -->
   <link rel="icon" type="image/png" href="img/favicon.png" />
-  <link rel="canonical" href="https://personaltaf.com/" />
+  <link rel="canonical" href="https://ronaldotenorio.com/arsenalrt" />
 
   <!-- ====== SEO PADRÃO ====== -->
-  <meta
-    name="description"
-    content="Lelisson Personal TAF - Consultoria online e método validado para aprovação no Teste de Aptidão Física (TAF). Mais de 10.000 alunos aprovados em todo o Brasil."
-  />
-  <meta
-    name="keywords"
-    content="TAF, concurso, polícia, barra fixa, Lelisson, Personal TAF, consultoria TAF, treinamento TAF, teste físico concurso"
-  />
-  <meta name="author" content="Agência aNave" />
+<meta
+  name="description"
+  content="Ferramentas de Design para Designers: Photoshop, Illustrator, CorelDRAW, Microsoft Office e outros softwares prontos para uso, testados e com tutorial."
+/>
 
-  <!-- ====== OPEN GRAPH (Facebook, WhatsApp, LinkedIn, etc.) ====== -->
-  <meta property="og:title" content="Lelisson Personal TAF - Consultoria Online para TAF" />
-  <meta
-    property="og:description"
-    content="Especialista em fisiologia do exercício e condicionamento físico, com foco exclusivo na preparação de candidatos para o Teste de Aptidão Física (TAF)."
-  />
-  <meta
-    property="og:image"
-    content="https://personaltaf.com/img/LelissonPersonal_PersonalTAF_ConcursoPolicia_TAF-FemininoBarraFixa.jpg"
-  />
-  <meta property="og:url" content="https://personaltaf.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
+<meta
+  name="keywords"
+  content="ferramentas de design, photoshop, illustrator, coreldraw, office, softwares para designers, design gráfico, recursos para design, ferramentas criativas"
+/>
 
-  <!-- ====== TWITTER ====== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lelisson Personal TAF - Consultoria Online para TAF" />
-  <meta
-    name="twitter:description"
-    content="Ajudo você a conquistar sua aprovação no TAF com metodologia validada e treinamento personalizado."
-  />
-  <meta
-    name="twitter:image"
-    content="https://personaltaf.com/img/LelissonPersonal_PersonalTAF_ConcursoPolicia_TAF-FemininoBarraFixa.jpg"
-  />
+<meta name="author" content="Agência aNave" />
 
+<!-- ====== OPEN GRAPH (Facebook, WhatsApp, LinkedIn, etc.) ====== -->
+<meta
+  property="og:title"
+  content="Ferramentas para Designers | Softwares Prontos para Uso"
+/>
+
+<meta
+  property="og:description"
+  content="Baixe ferramentas essenciais para designers: Photoshop, Illustrator, CorelDRAW, Office e muito mais. Todos testados e com tutorial passo a passo."
+/>
+
+<meta
+  property="og:image"
+  content="https://ronaldotenorio.com/arsenalrt3/img/capa_compartilhada_adobe.jpg"
+/>
+
+<meta
+  property="og:url"
+  content="https://ronaldotenorio.com/arsenalrt"
+/>
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- ====== TWITTER ====== -->
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta
+  name="twitter:title"
+  content="Ferramentas para Designers | Softwares Essenciais"
+/>
+
+<meta
+  name="twitter:description"
+  content="Ferramentas de design testadas, prontas para uso e com tutorial. Ideal para quem está começando ou quer agilidade."
+/>
+
+<meta
+  name="twitter:image"
+  content="https://ronaldotenorio.com/arsenalrt3/img/capa_compartilhada_adobe.jpg"
+/>
   <!-- ====== ICONES E FONTES ====== -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link
@@ -163,6 +159,49 @@
     color: #222;
     line-height: 1.6;
   }
+	 
+	 /* ====== NOTIFICAÇÃO FLUTUANTE ====== */
+
+.notificacao-site{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#ffffff;
+  border-radius:12px;
+  padding:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:260px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  font-family:'Poppins', sans-serif;
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.4s;
+  z-index:9999;
+}
+
+.notificacao-site.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.notificacao-site img{
+  width:60px;
+  height:60px;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+.notificacao-texto span{
+  font-size:14px;
+  font-weight:600;
+}
+
+.notificacao-tempo{
+  font-size:12px;
+  color:#777;
+}
 
   /* ====== BANNER ====== */
   .banner {
@@ -473,6 +512,23 @@
       height: 140px;
     }
   }
+	 /* ====== NOTIFICAÇÃO MOBILE ====== */
+
+@media (max-width:768px){
+
+.notificacao-site{
+  left:50%;
+  right:auto;
+  transform:translate(-50%,20px);
+  width:90%;
+  max-width:320px;
+}
+
+.notificacao-site.show{
+  transform:translate(-50%,0);
+}
+
+}
 </style>
 
 </head>
@@ -482,13 +538,92 @@
   <!-- ====== BANNER ====== -->
   <section class="banner">
     <div class="logo-topo">
-      <img src="img/Logo_FerramentasParaDesigners.png" alt="Logo Lelisson Personal TAF">
+      <img src="img/Logo_FerramentasParaDesigners.png" alt="Ferramentas para Designers Logo Adobe">
     </div>
   </section>
+	
+<!-- ====== NOTIFICAÇÃO DE NOVIDADES ====== -->
+<div class="notificacao-site" id="notificacaoSite">
+  <img id="notificacaoImg" src="img/quadrado1.jpg" alt="Notificação">
 
+  <div class="notificacao-texto">
+    <span id="notificacaoMensagem">Mensagem</span>
+    <div class="notificacao-tempo">agora</div>
+  </div>
+</div>
+	
+<!-- ====== SCRIPT NOTIFICAÇÃO ====== -->
+<script>
+
+const notificacoes = [
+{
+imagem:"img/quadrado1.jpg",
+nome:"Caio Batista de Curitiba/PR"
+},
+{
+imagem:"img/quadrado2.jpg",
+nome:"Dênio de São Paulo/SP"
+},
+{
+imagem:"img/quadrado3.jpg",
+nome:"Luisa do Rio de Janeiro/RJ"
+},
+{
+imagem:"img/quadrado4.jpg",
+nome:"Tauan de Belo Horizonte/MG"
+},
+{
+imagem:"img/quadrado5.jpg",
+nome:"Leandro de Vitória/ES"
+},
+{
+imagem:"img/quadrado6.jpg",
+nome:"Marcelo de Campinas/SP"
+},
+{
+imagem:"img/quadrado7.jpg",
+nome:"Ricardo de Campinas/SP"
+},
+{
+imagem:"img/quadrado8.jpg",
+nome:"Carlos de Curitiba/PR"
+},
+{
+imagem:"img/quadrado9.jpg",
+nome:"Tatiane de Porto Alegre/RS"
+},
+{
+imagem:"img/quadrado10.jpg",
+nome:"Saulo de Caxias do Sul/RS"
+}
+];
+
+const box = document.getElementById("notificacaoSite");
+const img = document.getElementById("notificacaoImg");
+const texto = document.getElementById("notificacaoMensagem");
+
+function mostrarNotificacao(){
+
+const item = notificacoes[Math.floor(Math.random()*notificacoes.length)];
+
+img.src = item.imagem;
+texto.innerHTML = `<strong>${item.nome}</strong> comprou`;
+
+box.classList.add("show");
+
+setTimeout(()=>{
+box.classList.remove("show");
+},5000);
+
+}
+
+setTimeout(mostrarNotificacao,8000);
+setInterval(mostrarNotificacao,30000);
+
+</script>
   <!-- ====== SEÇÃO SOBRE ====== -->
   <section class="sobre">
-    <img src="img/Perfil_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis.jpg" alt="Lelisson Personal TAF">
+    <img src="img/Perfil_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis.jpg" alt="Ferramentas para Designers">
     <div class="texto">
       <p><b>Criamos este arsenal</b> pensando em quem está começando no design. Cada software é testado por nós <b>100 % livre de vírus&nbsp;</b>e acompanha um tutorial em vídeo, passo a passo, para você instalar sem erro já na primeira tentativa.</p>
       <p>
@@ -578,6 +713,20 @@
 
       <div class="card">
         <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_06.jpg" alt="Ferramenta de Design 06">
+        <div class="card__actions">
+          <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
+          <a class="btn-overlay btn-whats"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta">
+
+            ENVIAR COMPROVANTE<br>E RECEBER LINK
+          </a>
+        </div>
+      </div>
+		
+		<div class="card">
+        <img src="img/Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_AdobeIllustrator2026_18.jpg" alt="Ferramenta de Design 06">
         <div class="card__actions">
           <button class="btn-overlay btn-copy" type="button" data-pix="mercadopago@ronaldotenorio.com">COPIAR CHAVE PIX</button>
           <a class="btn-overlay btn-whats"
